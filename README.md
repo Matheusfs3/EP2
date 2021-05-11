@@ -66,3 +66,10 @@ def possui_movimentos_possiveis (baralho):
             return True
     else:
         return False  
+   
+while possui_movimentos_possiveis(baralho):
+    for carta in baralho:
+    indice = int(input('escolha uma carta (digite um numero entre 1 e {}): '.format(len(baralho))))
+    movimentos = lista_movimentos_possiveis(baralho, indice)
+    o = indice
+    if len(movimentos) >= 1:
