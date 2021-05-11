@@ -1,11 +1,5 @@
 # EP2
-def cria_baralho ():
-    lista_e = ['2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠', 'A♠']
-    lista_c = ['2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♥']
-    lista_o = ['2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♦']
-    lista_p = ['2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♣']
-    baralho = lista_c + lista_e + lista_o + lista_p
-    return baralho
+baralho = ['A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣']
     
 def lista_movimentos_possiveis (baralho, indice):
     carta = baralho [indice]
@@ -35,6 +29,11 @@ def lista_movimentos_possiveis (baralho, indice):
     elif naipe == naipe_3anterior:
         retorno.append(3)
     return retorno
+    
+def empilha(baralho, o, d):
+    baralho[d] = baralho[o]
+    baralho.pop(o)
+    return baralho
     
 def possui_movimentos_possiveis (baralho):
     indice = 0
