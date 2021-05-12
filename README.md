@@ -79,11 +79,12 @@ while possui_movimentos_possiveis(baralho):
     if len(lista_movimentos_possiveis(baralho, indice)) > 1:
         d = int(input('Sobre qual carta você que empilhar o {} ? Digite o número da sua escolha'.format(len(indice))))
     elif lista_movimentos_possiveis(baralho, indice) == [1]:
-        d = len(indice)-1 
+        d = indice-1
+        baralho = empilha(baralho, indice, d)
     elif lista_movimentos_possiveis(baralho, indice) == [3]:
-        d = len(indice)-3
+        d = indice-3
+        baralho = empilha(baralho, indice, d)
     else:
         d = None
         print('A carta escolhida não pode ser movida')
-    if d == len(indice)-1 
 
