@@ -82,7 +82,7 @@ while possui_movimentos_possiveis(baralho):
         if lista_movimentos_possiveis(baralho, indice) == 1:
             d = 1
             baralho = empilha(baralho, indice, indice-1)
-        elif lista_movimentos_possiveis(baralho, indice) == 3:
+        else:
             d = 2
             baralho = empilha(baralho, indice, indice-3)
     else:
