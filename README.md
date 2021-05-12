@@ -89,4 +89,8 @@ while possui_movimentos_possiveis(baralho):
         baralho = empilha(baralho, indice, indice-3)
     else:
         print('A carta escolhida não pode ser movida')
+if len(baralho) > 1:
+    print('Parabéns, você ganhou!')
+else:
+    print('Que pena, tente outra vez')
 
