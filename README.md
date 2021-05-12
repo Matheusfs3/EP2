@@ -81,10 +81,12 @@ while possui_movimentos_possiveis(baralho):
     else:
         if lista_movimentos_possiveis(baralho, indice) == 1:
             d = 1
-            baralho = empilha(baralho, indice, indice-1)
         else:
             d = 2
-            baralho = empilha(baralho, indice, indice-3)
+    if d = 1:
+        baralho = empilha(baralho, indice, indice-1)
+    if d = 3:
+        baralho = empilha(baralho, indice, indice-3)
     else:
         print('A carta escolhida não pode ser movida')
 
