@@ -77,7 +77,7 @@ while possui_movimentos_possiveis(baralho):
         print('{}: {}'.format(baralho.index(carta)+1, carta))
     indice +1 = int(input('escolha uma carta (digite um numero entre 1 e {}):'.format(len(baralho))))
     if len(lista_movimentos_possiveis(baralho, indice)) > 1:
-        d = int(input('Sobre qual carta você que empilhar o {} ? \n 1. {} \n 2. {} Digite o número da sua escolha'.format(baralho[indice], baralho[indice-1], baralho[indice-3])))
+        d = int(input('Sobre qual carta você que empilhar o {} ? \n 1:{} \n2: {} \nDigite o número da sua escolha:'.format(baralho[indice], baralho[indice-1], baralho[indice-3])))
     else:
         if lista_movimentos_possiveis(baralho, indice) == 1:
             d = 1
