@@ -70,15 +70,20 @@ def possui_movimentos_possiveis (baralho):
             return True
     else:
         return False  
+        
 while possui_movimentos_possiveis(baralho):
     print('O estado atual do baralho é:')
     for carta in baralho:
         print('{}: {}'.format(baralho.index(carta)+1, carta))
-    indice = int(input('escolha uma carta (digite um numero entre 1 e {}): '.format(len(baralho))))
+    indice = int(input('escolha uma carta (digite um numero entre 1 e {}):'.format(len(baralho))))
     if len(lista_movimentos_possiveis(baralho, indice)) > 1:
-        d = int(input('Sobre qual carta você que empilhar o {} ? Digite o número da sua escolha'.format(baralho[indice]))   
+        d = int(input('Sobre qual carta você que empilhar o {} ? Digite o número da sua escolha'.format(len(indice))))
     elif lista_movimentos_possiveis(baralho, indice) == [1]:
-        d = 1
+        d = len(indice)-1 
+    elif lista_movimentos_possiveis(baralho, indice) == [3]:
+        d = len(indice)-3
     else:
-        d =    
+        d = None
+        print('A carta escolhida não pode ser movida')
+    if d == len(indice)-1 
 
